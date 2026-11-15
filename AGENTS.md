@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- The home page is an imported website clone: keep its markup in src/routes/index.tsx and its retained source styles in src/styles/site.css, so follow-up edits stay in the route file rather than extracted components.
