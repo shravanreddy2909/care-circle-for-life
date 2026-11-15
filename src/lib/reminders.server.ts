@@ -137,7 +137,7 @@ export async function runReminderTick(nowMs = Date.now()) {
     else if (nowMs >= t - 24 * 60 * MIN && nowMs < t - 3 * 60 * MIN && !a.day_before_sent_at) kind = "appt_day";
     if (!kind) continue;
     const column = kind === "appt_hours" ? "hours_before_sent_at" : "day_before_sent_at";
-    const { data: claimed } = await admin.from("appointments").update({ [column]: nowIso })
+    const { data: claimed } = await admin.from("appointments").update(column === "hours_before_sent_at" ? { hours_before_sent_at: nowIso } : { day_before_sent_at: nowIso })
       .eq("id", a.id).is(column, null).select("id");
     if (!claimed?.length) continue;
     stats.appointments++;

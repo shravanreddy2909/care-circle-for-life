@@ -43,7 +43,7 @@ function SignupPage() {
     setBusy(true);
     const { error: err } = await supabase.auth.signUp({
       email, password,
-      options: { emailRedirectTo: `${window.location.origin}/dashboard`, data: { full_name: fullName } },
+      options: { emailRedirectTo: `${window.location.origin}/login`, data: { full_name: fullName } },
     });
     setBusy(false);
     if (err) return setError("We couldn't create your account. Please check your details and try again.");
