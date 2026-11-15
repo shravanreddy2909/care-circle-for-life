@@ -56,8 +56,6 @@ export const addCaretaker = createServerFn({ method: "POST" })
     const me = await requireCaretaker(context.userId);
     if (!isStrongPassword(data.password)) throw new Error("Please choose a stronger password");
     if (!(await hit(`members:${me.familyId}`, 10, 3600, 3600))) throw new Error("Too many changes. Please try later.");
-    const { count } = await admin.from("profiles").select("id", { count: "exact", head: true }).eq("family_id", me.familyId);
-    void count;
     const { data: created, error } = await admin.auth.admin.createUser({
       email: data.email, password: data.password, email_confirm: true, user_metadata: { full_name: data.fullName },
     });
