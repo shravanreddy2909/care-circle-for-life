@@ -3,7 +3,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/site.css?raw";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "CareCircle — Calm, dignified medication care for your elders" }] }),
+  head: () => ({
+    meta: [
+      { title: "CareCircle — Calm, dignified medication care for your elders" },
+      { name: "description", content: "CareCircle brings caretakers and elders into a shared circle so every tablet is taken on time." },
+      { property: "og:title", content: "CareCircle — Calm, dignified medication care for your elders" },
+      { property: "og:description", content: "CareCircle brings caretakers and elders into a shared circle so every tablet is taken on time." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   staticData: { importedDocument: { html: { "lang": "en" }, body: {  } } },
   component: Index,
 });
