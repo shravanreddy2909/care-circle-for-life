@@ -8,6 +8,13 @@
       "when": 1794727009025,
       "tag": "0000_carecircle_core",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794727037444,
+      "tag": "0001_medicine_audit_skip_family_delete",
+      "breakpoints": true
     }
   ]
 }
