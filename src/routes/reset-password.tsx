@@ -41,7 +41,7 @@ function ResetPage() {
     const { error: err } = await supabase.auth.updateUser({ password });
     if (err) return setError("Could not update the password. The link may have expired.");
     toast.success("Password updated");
-    navigate({ to: "/dashboard" });
+    navigate({ to: "/login" });
   }
 
   return (

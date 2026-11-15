@@ -24,9 +24,9 @@ function offsetMs(tz: string, at: Date) {
 
 /** Convert a wall-clock "YYYY-MM-DDTHH:mm" in tz to a UTC Date. */
 export function zonedToUtc(local: string, tz: string): Date {
-  const [d, t = "00:00"] = local.split("T");
-  const [y, m, day] = d.split("-").map(Number);
-  const [hh, mm] = t.split(":").map(Number);
+  const [d = "", t = "00:00"] = local.split("T");
+  const [y = 1970, m = 1, day = 1] = d.split("-").map(Number);
+  const [hh = 0, mm = 0] = t.split(":").map(Number);
   const guess = Date.UTC(y, m - 1, day, hh, mm);
   const first = guess - offsetMs(tz, new Date(guess));
   return new Date(guess - offsetMs(tz, new Date(first)));
@@ -71,7 +71,7 @@ export function formatDate(iso: string | Date, tz: string) {
 }
 
 export function formatClock(hhmm: string) {
-  const [h, m] = hhmm.split(":").map(Number);
+  const [h = 0, m = 0] = hhmm.split(":").map(Number);
   const suffix = h >= 12 ? "PM" : "AM";
   return `${((h + 11) % 12) + 1}:${String(m).padStart(2, "0")} ${suffix}`;
 }

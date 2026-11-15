@@ -12,12 +12,12 @@ import { loginCaretaker, loginElder } from "@/lib/auth.functions";
 import { EMAIL_RE, normaliseFamilyCode } from "@/lib/validation";
 import { cn } from "@/lib/utils";
 
-type Search = { as?: "elder" | "caretaker"; redirect?: string };
+type Search = { as?: "elder" | "caretaker" | undefined; redirect?: string | undefined };
 
 export const Route = createFileRoute("/login")({
   validateSearch: (s: Record<string, unknown>): Search => ({
-    as: s.as === "elder" ? "elder" : s.as === "caretaker" ? "caretaker" : undefined,
-    redirect: typeof s.redirect === "string" && s.redirect.startsWith("/") && !s.redirect.startsWith("//") ? s.redirect : undefined,
+    as: s["as"] === "elder" ? "elder" : s["as"] === "caretaker" ? "caretaker" : undefined,
+    redirect: typeof s["redirect"] === "string" && s["redirect"].startsWith("/") && !s["redirect"].startsWith("//") ? s["redirect"] : undefined,
   }),
   head: () => ({
     meta: [
@@ -52,7 +52,7 @@ function LoginPage() {
       return;
     }
     queryClient.removeQueries({ queryKey: ["me"] });
-    navigate({ to: search.redirect ?? "/dashboard", replace: true });
+    navigate({ to: search.redirect ?? "/", replace: true });
   }
 
   async function onCaretaker(e: FormEvent<HTMLFormElement>) {
