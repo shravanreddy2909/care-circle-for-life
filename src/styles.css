@@ -153,3 +153,133 @@
     color: var(--color-foreground);
   }
 }
+
+/* site-import tokens: begin (generated; re-import replaces this block) */
+/* Imported clone roles use prefixed Tailwind utilities
+   (bg-site-import-primary, text-site-import-foreground, …); edit the
+   --site-import-* variables to restyle the clone. Unprefixed roles theme new UI. */
+:root {
+  --background: oklch(0.9653 0.0224 87.15);
+  --site-import-background: oklch(0.9653 0.0224 87.15);
+  --foreground: oklch(0.20637 0.01844 6.73);
+  --site-import-foreground: oklch(0.20637 0.01844 6.73);
+  --primary: oklch(0.86026 0.04068 69.68);
+  --site-import-primary: oklch(0.86026 0.04068 69.68);
+  --primary-foreground: oklch(0.145 0 0);
+  --site-import-primary-foreground: oklch(0.145 0 0);
+  --accent: oklch(0.41841 0.14692 18.86);
+  --site-import-accent: oklch(0.41841 0.14692 18.86);
+  --card: oklch(0.98572 0.01261 86.83);
+  --site-import-card: oklch(0.98572 0.01261 86.83);
+  --muted-foreground: oklch(0.42963 0.04 18.84);
+  --site-import-muted-foreground: oklch(0.42963 0.04 18.84);
+}
+/* Design tokens captured from the imported site, registered as Tailwind
+   utilities (bg-<name>, text-<name>, font-<name>). var() values live in
+   the imported stylesheet's :root. */
+@theme inline {
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Playfair Display", ui-serif, Georgia, serif;
+  --color-site-import-background: var(--site-import-background);
+  --color-site-import-foreground: var(--site-import-foreground);
+  --color-site-import-primary: var(--site-import-primary);
+  --color-site-import-primary-foreground: var(--site-import-primary-foreground);
+  --color-site-import-accent: var(--site-import-accent);
+  --color-site-import-card: var(--site-import-card);
+  --color-site-import-muted-foreground: var(--site-import-muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-burgundy: var(--burgundy);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-crimson: var(--crimson);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+  --color-input: var(--input);
+  --color-ivory: var(--ivory);
+  --color-ivory-deep: var(--ivory-deep);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-ring: var(--ring);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+}
+@theme reference {
+  --animate-pulse: pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+  --animate-spin: spin 1s linear infinite;
+  --aspect-video: 16 / 9;
+  --color-background: oklch(96.5% .022 87.2);
+  --color-border: oklch(86% .04 70);
+  --color-foreground: oklch(20.6% .018 6.7);
+  --container-2xl: 42rem;
+  --container-6xl: 72rem;
+  --container-lg: 32rem;
+  --container-md: 28rem;
+  --container-sm: 24rem;
+  --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --font-display: "Playfair Display", ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --leading-relaxed: 1.625;
+  --leading-tight: 1.25;
+  --radius-xl: calc(.875rem + 4px);
+  --shadow-lift: 0 2px 4px color-mix(in oklab, oklch(31.4% .108 15) 10%, transparent), 0 22px 44px -18px color-mix(in oklab, oklch(31.4% .108 15) 45%, transparent);
+  --shadow-pop: 0 30px 60px -20px color-mix(in oklab, oklch(31.4% .108 15) 55%, transparent);
+  --shadow-soft: 0 1px 2px color-mix(in oklab, oklch(31.4% .108 15) 8%, transparent), 0 8px 24px -12px color-mix(in oklab, oklch(31.4% .108 15) 25%, transparent);
+  --spacing: .25rem;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1;
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-sm: .875rem;
+  --text-sm--line-height: calc(1.25 / .875);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-xs: .75rem;
+  --text-xs--line-height: calc(1 / .75);
+  --tracking-tight: -.025em;
+  --tracking-wider: .05em;
+  --tracking-widest: .1em;
+}
+/* site-import tokens: end */
